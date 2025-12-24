@@ -2,9 +2,13 @@ package com.qa.orangehrm.diverfactory;
 
 import java.io.File;
 import java.io.FileInputStream;
+<<<<<<< HEAD
 import java.io.IOException;
 import java.util.Properties;
 
+=======
+import java.util.Properties;
+>>>>>>> f536a6621563ce21c96d324efe051812f08fe052
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -15,7 +19,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+<<<<<<< HEAD
 
+=======
+import com.qa.orangehrm.appconstants.I_ApplicationConstantValues;
+>>>>>>> f536a6621563ce21c96d324efe051812f08fe052
 import com.qa.orangehrm.apperrormsg.ApplicationErrorMsg;
 import com.qa.orangehrmexceptions.FrameworkExceptions;
 
@@ -55,6 +63,7 @@ public class DriverManager {
 	}
 	
 	
+<<<<<<< HEAD
 	//Multiple environment
 	//mvn clean install -Denv="qa"
 	public Properties initProperty() {
@@ -90,6 +99,23 @@ public class DriverManager {
 			e.printStackTrace();
 		}
 		return prop;
+=======
+	
+	public Properties initProperty() {
+		try {
+			FileInputStream fis = new FileInputStream(I_ApplicationConstantValues.PROPERTYFILEPATH);
+			prop = new Properties();
+			prop.load(fis);
+			bopts = new BrowserOptions(prop);
+			log.info("From class [DriverManager] & method [initProperty] The porperty file  has been initialized with proper location");
+			}
+		catch (Exception e) {
+			log.info("From class [DriverManager] & method [initProperty] The porperty file  is not initialized");
+			throw new FrameworkExceptions("===[DriverManager] - Could not initiate the property file / incorrect file path===");
+		}
+		log.info("From class [DriverManager] & method [initProperty] The porperty file  is initialized and returned");
+		return prop;		
+>>>>>>> f536a6621563ce21c96d324efe051812f08fe052
 	}
 	
 	public static File captureScreenshotFile() {
@@ -104,3 +130,12 @@ public class DriverManager {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> f536a6621563ce21c96d324efe051812f08fe052

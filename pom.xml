@@ -80,6 +80,7 @@
         </argLine>
         
         <suiteXmlFiles>
+<<<<<<< HEAD
     <!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
     <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
     </suiteXmlFiles>
@@ -92,13 +93,34 @@
     </dependency>
     </dependencies>
 	</plugin>
+=======
+       <!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
+        <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
+        </suiteXmlFiles>
+    </configuration>
+    <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+    </dependencies>
+</plugin>
+>>>>>>> f536a6621563ce21c96d324efe051812f08fe052
     <plugin>
 	<groupId>io.qameta.allure</groupId>
 	<artifactId>allure-maven</artifactId>
 	<version>2.12.0</version>
+<<<<<<< HEAD
 	</plugin> 
    	</plugins>
 	</build>
+=======
+</plugin> 
+     
+  </plugins>
+  </build>
+>>>>>>> f536a6621563ce21c96d324efe051812f08fe052
    
 </project>
 
