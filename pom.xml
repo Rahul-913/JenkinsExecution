@@ -61,66 +61,49 @@
     <scope>runtime</scope>
 </dependency>
   </dependencies>
-  <build>
-  <plugins>
-  	<plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.14.1</version>
-     </plugin>
-     
-     
-     <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.1.2</version>
-    <configuration>
-        <argLine>
-            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-        </argLine>
-        
-        <suiteXmlFiles>
-<<<<<<< HEAD
-    <!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
-    <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
-    </suiteXmlFiles>
-    </configuration>
-    <dependencies>
-    <dependency>
-    <groupId>org.aspectj</groupId>
-    <artifactId>aspectjweaver</artifactId>
-    <version>${aspectj.version}</version>
-    </dependency>
-    </dependencies>
-	</plugin>
-=======
-       <!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
-        <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
-        </suiteXmlFiles>
-    </configuration>
-    <dependencies>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-    </dependencies>
-</plugin>
->>>>>>> f536a6621563ce21c96d324efe051812f08fe052
-    <plugin>
-	<groupId>io.qameta.allure</groupId>
-	<artifactId>allure-maven</artifactId>
-	<version>2.12.0</version>
-<<<<<<< HEAD
-	</plugin> 
-   	</plugins>
-	</build>
-=======
-</plugin> 
-     
-  </plugins>
-  </build>
->>>>>>> f536a6621563ce21c96d324efe051812f08fe052
+ <build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.14.1</version>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+                <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+
+                <suiteXmlFiles>
+                    <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
+                    <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+
+            <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+
+        <plugin>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-maven</artifactId>
+            <version>2.12.0</version>
+        </plugin>
+
+    </plugins>
+</build>
+
+
    
 </project>
 
