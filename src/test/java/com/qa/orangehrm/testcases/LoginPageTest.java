@@ -84,7 +84,11 @@ public class LoginPageTest extends BaseTest{
 		ChainTestListener.log("doTest is success");
 	}
 	
-	
+	@Test
+	public void doTest1() {
+		log.info("doTest is success");
+		ChainTestListener.log("doTest is success");
+	}
 	
 
 }
