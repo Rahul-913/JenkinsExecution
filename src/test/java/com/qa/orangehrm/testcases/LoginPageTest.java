@@ -78,6 +78,11 @@ public class LoginPageTest extends BaseTest{
 //		Assert.fail();
 	}
 	
+	@Test
+	public void testLoginApp() {
+		log.info("testdoLoginApp is success");
+		ChainTestListener.log("testLoginApp is success");//chaintest report
+	}
 	
 	
 	
