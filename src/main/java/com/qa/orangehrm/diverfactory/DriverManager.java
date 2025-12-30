@@ -3,10 +3,9 @@ package com.qa.orangehrm.diverfactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.MalformedInputException;
 import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -18,6 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+
 import com.qa.orangehrm.apperrormsg.ApplicationErrorMsg;
 import com.qa.orangehrmexceptions.FrameworkExceptions;
 
@@ -71,7 +71,48 @@ public class DriverManager {
 		log.info("From class [DriverManager] & method [getDriver] The localdriver has been returned");
 		return ltDriver.get();
 	}
-	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		log.info("From class [DriverManager] & method [browserInit] The initialized browser is :"+browserName);
+//		switch(browserName.toLowerCase().trim()){
+//			case"chrome":
+//				ltDriver.set(new ChromeDriver(bopts.getChromeOptions()));
+//				break;
+//			case"firefox":
+//				ltDriver.set(new FirefoxDriver(bopts.getFirefoxOptions()));
+//				break;
+//			case"edge":
+//				ltDriver.set(new EdgeDriver(bopts.getEdgeOptions()));
+//				break;
+//			case"ie":
+//				ltDriver.set(new InternetExplorerDriver(bopts.getIEOptions()));
+//				break;
+//			case"safari":
+//				ltDriver.set(new SafariDriver());
+//				break;
+//			default:System.out.println(ApplicationErrorMsg.INVALID_BROWSER_MSG);
+//					throw new FrameworkExceptions("===Invalid Browsername===");
+//		}
+//		return getDriver();
+//	}
+//	
+//	public static WebDriver getDriver() {
+//		log.info("From class [DriverManager] & method [getDriver] The localdriver has been returned");
+//		return ltDriver.get();
+
 	
 	public Properties initProperty() {
 		prop = new Properties();
@@ -104,9 +145,11 @@ public class DriverManager {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return prop;}
+
+		return prop;
+		}
 	
-	
+
 	
 	private void init_remoteDriver(String browserName) {
 		try {
@@ -124,8 +167,9 @@ public class DriverManager {
 		catch (Exception e) {
 			}
 		}
+
 	
-		public static File captureScreenshotFile() {
+	public static File captureScreenshotFile() {
 		TakesScreenshot ts = (TakesScreenshot)getDriver();
 		log.info("From class [DriverManager] & method [captureScreenshotFile] The screenshot has initialized and returned");
 		return ts.getScreenshotAs(OutputType.FILE);
