@@ -26,6 +26,9 @@ public class BrowserOptions {
 		if(Boolean.parseBoolean(prop.getProperty("incognito"))) {
 		co.addArguments("--incognito");
 		}
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("browserName","chrome");
+		}
 		return co;
 	}
 	public FirefoxOptions getFirefoxOptions() {
@@ -35,6 +38,9 @@ public class BrowserOptions {
 		}
 		if(Boolean.parseBoolean(prop.getProperty("incognito"))) {
 			fo.addArguments("--incognito");
+		}
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setCapability("browserName","firefox");
 		}
 		return fo;
 	}
@@ -46,6 +52,9 @@ public class BrowserOptions {
 		if(Boolean.parseBoolean(prop.getProperty("incognito"))) {
 			eo.addArguments("--incognito");
 		}
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			eo.setCapability("browserName","edge");
+		}
 		return eo;
 	}
 	public InternetExplorerOptions getIEOptions() {
@@ -55,6 +64,9 @@ public class BrowserOptions {
 		}
 		if(Boolean.parseBoolean(prop.getProperty("incognito"))) {
 		io.addCommandSwitches("--incognito");
+		}
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			io.setCapability("browserName","ie");
 		}
 		return io;
 	}
